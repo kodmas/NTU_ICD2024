@@ -1,0 +1,176 @@
+ 
+****************************************
+Report : area
+Design : IOTDF
+Version: U-2022.12
+Date   : Sat Apr 27 17:49:19 2024
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                         1502
+Number of nets:                          3973
+Number of cells:                         2198
+Number of combinational cells:           1845
+Number of sequential cells:               263
+Number of macros/black boxes:               0
+Number of buf/inv:                        372
+Number of references:                      94
+
+Combinational area:              28898.235443
+Buf/Inv area:                     1968.983969
+Noncombinational area:            8588.843739
+Macro/Black Box area:                0.000000
+Net Interconnect area:          266421.352448
+
+Total cell area:                 37487.079181
+Total area:                     303908.431629
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : IOTDF
+Version: U-2022.12
+Date   : Sat Apr 27 17:50:59 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: data_buffer_reg[124]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iot_out_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IOTDF              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  data_buffer_reg[124]/CK (DFFRX1)         0.00       1.00 r
+  data_buffer_reg[124]/Q (DFFRX1)          0.38       1.38 f
+  U736/Y (CLKBUFX3)                        0.39       1.77 f
+  U696/Y (CLKXOR2X2)                       0.30       2.07 r
+  U728/Y (XOR2X1)                          0.18       2.25 r
+  U689/Y (XOR3X2)                          0.35       2.60 f
+  U806/Y (CLKINVX1)                        0.09       2.69 r
+  U804/Y (NAND2X1)                         0.07       2.77 f
+  U805/Y (NAND2X1)                         0.28       3.04 r
+  U709/Y (XOR3X2)                          0.32       3.36 r
+  U712/Y (XOR2X1)                          0.28       3.64 r
+  U721/Y (XNOR3X1)                         0.35       3.99 r
+  U729/Y (XOR3X1)                          0.41       4.40 r
+  U711/Y (XNOR2X1)                         0.28       4.69 r
+  U706/Y (XOR3X1)                          0.35       5.03 r
+  U812/Y (XOR3X2)                          0.28       5.32 r
+  U734/Y (XNOR2X1)                         0.23       5.55 r
+  U704/Y (XOR3X1)                          0.35       5.90 r
+  U1821/Y (XOR3X2)                         0.27       6.17 f
+  U811/Y (XOR2X4)                          0.11       6.28 r
+  U957/Y (CLKINVX1)                        0.17       6.45 f
+  U702/Y (XOR3X1)                          0.28       6.73 r
+  U1822/Y (XOR3X2)                         0.27       7.01 f
+  U810/Y (XOR2X4)                          0.11       7.12 r
+  U956/Y (CLKINVX1)                        0.17       7.29 f
+  U700/Y (XOR3X1)                          0.28       7.57 r
+  U1823/Y (XOR3X2)                         0.27       7.84 f
+  U809/Y (XOR2X4)                          0.11       7.95 r
+  U955/Y (CLKINVX1)                        0.20       8.16 f
+  U698/Y (XOR3X1)                          0.30       8.45 r
+  U1824/Y (XOR3X2)                         0.27       8.73 f
+  U753/Y (XOR2X4)                          0.12       8.85 f
+  U723/Y (INVX8)                           0.06       8.91 r
+  U720/Y (XOR2X1)                          0.27       9.18 r
+  U697/Y (XNOR3X1)                         0.52       9.70 r
+  U968/Y (XOR2X1)                          0.24       9.95 r
+  U969/Y (XOR2X1)                          0.29      10.23 r
+  U1254/Y (XOR2X1)                         0.22      10.45 f
+  U1252/Y (OAI221XL)                       0.28      10.73 r
+  iot_out_reg[10]/D (DFFRXL)               0.00      10.73 r
+  data arrival time                                  10.73
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              1.00      11.00
+  clock uncertainty                       -0.10      10.90
+  iot_out_reg[10]/CK (DFFRXL)              0.00      10.90 r
+  library setup time                      -0.14      10.76
+  data required time                                 10.76
+  -----------------------------------------------------------
+  data required time                                 10.76
+  data arrival time                                 -10.73
+  -----------------------------------------------------------
+  slack (MET)                                         0.03
+
+
+Loading db file '/home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : IOTDF
+Version: U-2022.12
+Date   : Sat Apr 27 17:51:47 2024
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+IOTDF                  tsmc13_wl10       slow
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 810.6854 uW   (87%)
+  Net Switching Power  = 124.7723 uW   (13%)
+                         ---------
+Total Dynamic Power    = 935.4576 uW  (100%)
+
+Cell Leakage Power     =  10.9740 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.7352            0.0000            0.0000            0.7352  (  77.68%)  i
+register       1.1794e-02        8.8942e-03        2.2979e+06        2.2986e-02  (   2.43%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  6.3698e-02            0.1159        8.6761e+06            0.1883  (  19.89%)
+--------------------------------------------------------------------------------------------------
+Total              0.8107 mW         0.1248 mW     1.0974e+07 pW         0.9464 mW
