@@ -1,0 +1,135 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : interpolation
+Version: U-2022.12
+Date   : Thu Jun 13 10:14:33 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: counter_r_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: o_data_r_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  interpolation      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  counter_r_reg[7]/CK (DFFRX1)                            0.00       1.00 r
+  counter_r_reg[7]/Q (DFFRX1)                             0.60       1.60 r
+  r735/a[7] (interpolation_DW_div_uns_13)                 0.00       1.60 r
+  r735/U2/Y (CLKINVX1)                                    0.14       1.75 f
+  r735/U1/Y (CLKINVX1)                                    0.18       1.93 r
+  r735/U22/Y (OR2X1)                                      0.20       2.13 r
+  r735/U6/Y (AND2X2)                                      0.31       2.44 r
+  r735/U8/Y (CLKMX2X2)                                    0.25       2.70 f
+  r735/U33/Y (OR2X1)                                      0.25       2.95 f
+  r735/U32/Y (OR2X1)                                      0.24       3.19 f
+  r735/U28/Y (OR2X1)                                      0.24       3.43 f
+  r735/U55/Y (AND2X2)                                     0.14       3.57 f
+  r735/U29/Y (OR2X2)                                      0.30       3.86 f
+  r735/U9/Y (CLKMX2X2)                                    0.26       4.12 r
+  r735/U72/Y (OR2X1)                                      0.20       4.32 r
+  r735/U30/Y (OR2X1)                                      0.21       4.53 r
+  r735/U26/Y (OR2X1)                                      0.22       4.75 r
+  r735/U7/Y (NAND2X1)                                     0.11       4.86 f
+  r735/U58/Y (NAND2X2)                                    0.26       5.12 r
+  r735/U68/Y (MXI2X1)                                     0.32       5.44 r
+  r735/U19/Y (CLKINVX1)                                   0.19       5.63 f
+  r735/U20/Y (OR2X1)                                      0.26       5.89 f
+  r735/U31/Y (OR2X1)                                      0.24       6.13 f
+  r735/U27/Y (OR2X1)                                      0.24       6.37 f
+  r735/U25/Y (AND2X2)                                     0.14       6.51 f
+  r735/U21/Y (OR2X2)                                      0.29       6.80 f
+  r735/U71/Y (MXI2X1)                                     0.20       7.00 r
+  r735/U70/Y (OR2X1)                                      0.15       7.15 r
+  r735/U63/Y (NOR2X1)                                     0.08       7.23 f
+  r735/U60/Y (NAND2X1)                                    0.12       7.36 r
+  r735/U10/Y (AND2X2)                                     0.11       7.47 r
+  r735/U53/Y (OR2X1)                                      0.20       7.67 r
+  r735/quotient[0] (interpolation_DW_div_uns_13)          0.00       7.67 r
+  U307/Y (CLKINVX1)                                       0.32       7.99 f
+  U745/Y (NOR2X1)                                         0.45       8.44 r
+  mult_64/U7/CO (ADDFXL)                                  0.59       9.03 r
+  U638/Y (XOR3X2)                                         0.52       9.56 r
+  mult_258/a[3] (interpolation_DW_mult_uns_4)             0.00       9.56 r
+  mult_258/U89/Y (CLKINVX2)                               0.36       9.92 f
+  mult_258/U101/Y (NOR2X1)                                0.22      10.15 r
+  mult_258/U22/S (ADDHXL)                                 0.25      10.40 r
+  mult_258/U77/CO (ADDFXL)                                0.55      10.95 r
+  mult_258/U75/CO (ADDFXL)                                0.30      11.25 r
+  mult_258/U76/S (ADDFXL)                                 0.38      11.63 r
+  mult_258/product[5] (interpolation_DW_mult_uns_4)       0.00      11.63 r
+  add_258/B[5] (interpolation_DW01_add_18_DW01_add_10)
+                                                          0.00      11.63 r
+  add_258/U1_5/CO (ADDFXL)                                0.53      12.16 r
+  add_258/U1_6/CO (ADDFXL)                                0.30      12.46 r
+  add_258/U1_7/CO (ADDFXL)                                0.30      12.76 r
+  add_258/U1_8/CO (ADDFXL)                                0.30      13.06 r
+  add_258/U1_9/CO (ADDFXL)                                0.30      13.36 r
+  add_258/U1_10/CO (ADDFXL)                               0.30      13.66 r
+  add_258/U1_11/Y (XOR3X1)                                0.27      13.93 r
+  add_258/SUM[11] (interpolation_DW01_add_18_DW01_add_10)
+                                                          0.00      13.93 r
+  U320/Y (NAND3BX1)                                       0.12      14.06 f
+  U321/Y (NOR3X2)                                         0.50      14.56 r
+  U322/Y (OR2X1)                                          0.20      14.76 r
+  sub_265/A[0] (interpolation_DW01_sub_5)                 0.00      14.76 r
+  sub_265/U3/Y (CLKINVX1)                                 0.12      14.88 f
+  sub_265/U1/Y (NAND2X2)                                  0.09      14.97 r
+  sub_265/U2_1/CO (ADDFX2)                                0.18      15.15 r
+  sub_265/U2_2/CO (ADDFXL)                                0.28      15.43 r
+  sub_265/U2_3/S (ADDFXL)                                 0.38      15.81 r
+  sub_265/DIFF[3] (interpolation_DW01_sub_5)              0.00      15.81 r
+  mult_265/b[3] (interpolation_DW_mult_uns_8)             0.00      15.81 r
+  mult_265/U111/Y (CLKINVX1)                              0.23      16.04 f
+  mult_265/U82/Y (NOR2XL)                                 0.27      16.32 r
+  mult_265/U86/S (ADDFXL)                                 0.56      16.88 r
+  mult_265/U78/Y (CLKINVX1)                               0.15      17.03 f
+  mult_265/U79/Y (OR2X1)                                  0.21      17.24 f
+  mult_265/U81/Y (NAND3X1)                                0.14      17.38 r
+  mult_265/U77/CO (ADDFXL)                                0.29      17.68 r
+  mult_265/U85/S (ADDFXL)                                 0.38      18.05 r
+  mult_265/product[5] (interpolation_DW_mult_uns_8)       0.00      18.05 r
+  add_267_2/B[1] (interpolation_DW01_add_30_DW01_add_22)
+                                                          0.00      18.05 r
+  add_267_2/U1_1/CO (ADDFXL)                              0.53      18.58 r
+  add_267_2/U1_2/CO (ADDFXL)                              0.30      18.88 r
+  add_267_2/U1_3/CO (ADDFXL)                              0.30      19.18 r
+  add_267_2/U1_4/CO (ADDFXL)                              0.30      19.48 r
+  add_267_2/U1_5/CO (ADDFXL)                              0.30      19.79 r
+  add_267_2/U1_6/CO (ADDFXL)                              0.30      20.09 r
+  add_267_2/U1_7/Y (XOR3X1)                               0.23      20.32 f
+  add_267_2/SUM[7] (interpolation_DW01_add_30_DW01_add_22)
+                                                          0.00      20.32 f
+  U468/Y (AOI222XL)                                       0.34      20.66 r
+  U466/Y (NAND3X1)                                        0.12      20.78 f
+  o_data_r_reg[7]/D (DFFRX1)                              0.00      20.78 f
+  data arrival time                                                 20.78
+
+  clock clk (rise edge)                                  20.00      20.00
+  clock network delay (ideal)                             1.00      21.00
+  clock uncertainty                                      -0.10      20.90
+  o_data_r_reg[7]/CK (DFFRX1)                             0.00      20.90 r
+  library setup time                                     -0.11      20.79
+  data required time                                                20.79
+  --------------------------------------------------------------------------
+  data required time                                                20.79
+  data arrival time                                                -20.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
